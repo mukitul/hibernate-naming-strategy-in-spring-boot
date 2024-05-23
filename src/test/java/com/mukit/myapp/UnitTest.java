@@ -19,11 +19,11 @@ public class UnitTest {
 
     @Test
     public void getAlphaAppUserTest() {
-        alphaAppRepository.findByUsername("alpha_mahfuz");
+        alphaAppRepository.findByUserName("alpha_mahfuz");
     }
 
     @Test
     public void getMyAppUserTest() {
-        myAppRepository.findByUsername("my_app_rashed");
+        myAppRepository.findByUserName("rashed_myapp");
     }
 }

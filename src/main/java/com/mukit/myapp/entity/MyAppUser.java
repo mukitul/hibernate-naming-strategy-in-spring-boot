@@ -11,14 +11,15 @@ import lombok.Data;
 @Table(name = "MY_APP_USER")
 public class MyAppUser {
     @Id
+    @Column(name = "ID")
     private Long id;
 
-    @Column(name = "username")
-    private String username;
+    @Column(name = "USER_NAME")
+    private String userName;
 
-    @Column(name = "phone_number")
+    @Column(name = "PHONE_NUMBER")
     private String phoneNumber;
 
-    @Column(name = "email")
+    @Column(name = "EMAIL")
     private String email;
 }
