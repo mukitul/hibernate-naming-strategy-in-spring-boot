@@ -1,7 +1,10 @@
 package com.mukit.myapp;
 
+import com.mukit.myapp.entity.AlphaAppUser;
+import com.mukit.myapp.entity.MyAppUser;
 import com.mukit.myapp.repository.AlphaAppRepository;
 import com.mukit.myapp.repository.MyAppRepository;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +22,13 @@ public class UnitTest {
 
     @Test
     public void getAlphaAppUserTest() {
-        alphaAppRepository.findByUserName("alpha_mahfuz");
+        AlphaAppUser alphaAppUser = alphaAppRepository.findByUserName("alpha_mahfuz");
+        Assert.assertNotNull("Alpha app user not found for username: alpha_mahfuz", alphaAppUser);
     }
 
     @Test
     public void getMyAppUserTest() {
-        myAppRepository.findByUserName("rashed_myapp");
+        MyAppUser myAppUser = myAppRepository.findByUserName("rashed_myapp");
+        Assert.assertNotNull("Alpha app user not found for username: rashed_myapp", myAppUser);
     }
 }
